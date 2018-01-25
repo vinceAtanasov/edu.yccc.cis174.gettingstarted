@@ -8,6 +8,6 @@ public class Computer {
 	private String os;
 	
 	public void testMe() {
-		
+		System.out.println("Xaxa");
 	}
 }
