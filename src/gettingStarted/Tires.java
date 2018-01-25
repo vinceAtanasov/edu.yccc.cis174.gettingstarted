@@ -33,4 +33,20 @@ public class Tires {
 		this.runFlat = runFlat;
 	}
 	
+	public String getBrand() {
+		return brand;
+	}
+	
+	 public String getType() {
+		 return type;
+	 }
+	 
+	 public String getSize() {
+		 return size;
+	 }
+	 
+	 public boolean getRunFlat() {
+		 return runFlat;
+	 }
+	
 	}
