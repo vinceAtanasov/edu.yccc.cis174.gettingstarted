@@ -1,11 +1,11 @@
 package gettingStarted;
 
-public class Computer {
-	private String motherBoard;
-	private String cpu;
-	private String ram;
-	private String hardDrive;
-	private String os;
+public class Tires {
+	private String brand;
+	private String type;
+	private String size;
+	private boolean runFlat;
+
 	
 	public void testMe() {
 		System.out.println("Xaxa");
