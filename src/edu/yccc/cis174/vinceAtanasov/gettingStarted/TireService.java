@@ -1,4 +1,4 @@
-package gettingStarted;
+package edu.yccc.cis174.vinceAtanasov.gettingStarted;
 
 /**
  * 
