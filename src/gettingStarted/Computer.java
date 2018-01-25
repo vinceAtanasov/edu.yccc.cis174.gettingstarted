@@ -7,4 +7,7 @@ public class Computer {
 	private String hardDrive;
 	private String os;
 	
+	public void testMe() {
+		
+	}
 }
