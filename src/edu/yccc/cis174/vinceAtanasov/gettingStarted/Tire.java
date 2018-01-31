@@ -1,8 +1,9 @@
 package edu.yccc.cis174.vinceAtanasov.gettingStarted;
-/**
- * 
- * @author Vince
- *
+/** @author Vince
+ * 	1. Inheritance - This is the ability of creating a new class from an existing one. Inheritance is when an object acquires the property of another object.
+ * 	2. Abstraction - This is the process of hiding out the working style of an object and showing only the required information of the object in understandable manner.
+ *	3. Polymorphism - This is the ability of an object to take many forms.
+ *	4. Encapsulation - This is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit.
  */
 public class Tire {
 	// Creating all of the variables.
