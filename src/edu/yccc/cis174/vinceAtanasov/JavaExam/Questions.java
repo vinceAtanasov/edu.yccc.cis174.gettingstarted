@@ -18,11 +18,11 @@ public class Questions {
 		this.qustion = qustion;
 	}
 
-	public String getAnswer() {
+	public String getPossibleAnswer() {
 		return possibleAnswers;
 	}
 
-	public void setAnswer(String answer) {
+	public void setPossibleAnswer(String answer) {
 		this.possibleAnswers = answer;
 	}
 
