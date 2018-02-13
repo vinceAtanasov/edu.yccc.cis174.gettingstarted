@@ -76,10 +76,17 @@ public class Exam {
 		int correct = 0;
 		int total = 10;
 		double grade = 0;
-		
-		userAnswers.retainAll(correctAnswers);
+
+		for (int i = 0; i < 9; i++) {
+			int result = (userAnswers.get(i).compareTo(correctAnswers.get(i)));
+			if (result == 0) {
+				correct++;
+			}
+		}
+
 		grade = (correct / total) * 100;
-		System.out.println(userAnswers);
+		System.out.println();
+		System.out.println("Your grade is: " + grade);
 	}
 
 	public static void main(String[] args) {
