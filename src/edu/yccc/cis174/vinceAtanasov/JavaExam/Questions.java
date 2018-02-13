@@ -35,7 +35,7 @@ public class Questions {
 
 	}
 	public String toString() {
-		return this.qustion + this.possibleAnswers;
+		return this.qustion;
 	}
 
 }
