@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Exam {
 	public List<Questions> questions = new ArrayList<Questions>();
-
+	public List<Answers> possibleAnswers = new ArrayList<Answers>();
 	
 	public List<Questions> loadQuestions() {
 		//questions.add(new Questions("Is Java multiplatform language?", null));
