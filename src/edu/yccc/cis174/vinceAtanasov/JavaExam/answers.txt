@@ -1,0 +1,10 @@
+1. A) public static int main(String[] args) B) public int main(String[] args) C) public static void main(String[] args) D) None of the above
+2. A) 8 bit B) 16 bit C) 32 bit D) 64 bit
+3. A) 0.0d B) 0.0f C) 0 D) not defined
+4. A) String is immutable B) String can be created using new operator C) String is a primary data type D) None of the above
+5. A) class variables are static variables within a class but outside any method B) class variables are variables defined inside methods, constructors or blocks C) class variables are variables within a class but outside any method D) None of the above
+6. A) True B) False
+7. A) static B) Boolean C) void D) private
+8. A) True B)False
+9. A) Abstraction is a technique to define different methods of same type B) Abstraction is the ability of an object to take on many forms C) It refers to the ability to make a class abstract in OOP
+10. A) Throwable B) Catchable C) MainError D) MainException

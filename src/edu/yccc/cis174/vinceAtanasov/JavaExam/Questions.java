@@ -34,5 +34,8 @@ public class Questions {
 	public Questions() {
 
 	}
+	public String toString() {
+		return this.qustion + this.possibleAnswers;
+	}
 
 }
