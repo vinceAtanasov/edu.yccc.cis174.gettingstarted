@@ -12,19 +12,19 @@ public class Exam {
 	public List<String> correctAnswers = new ArrayList<String>();
 	List<String> userAnswers = new ArrayList<String>();
 
-	public List<String> loadCorrectAnswers() {
+	public List<String> loadQuestions() {
 		try {
 			Scanner scanner = new Scanner(new File(
-					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\correctAnswers.txt"));
+					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\questions.txt"));
 
 			while (scanner.hasNextLine()) {
-				correctAnswers.add(scanner.nextLine());
+				questions.add(scanner.nextLine());
 			}
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		return correctAnswers;
+		return questions;
 	}
 
 	public List<String> loadAnswers() {
@@ -42,19 +42,19 @@ public class Exam {
 		return possibleAnswers;
 	}
 
-	public List<String> loadQuestions() {
+	public List<String> loadCorrectAnswers() {
 		try {
 			Scanner scanner = new Scanner(new File(
-					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\questions.txt"));
+					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\correctAnswers.txt"));
 
 			while (scanner.hasNextLine()) {
-				questions.add(scanner.nextLine());
+				correctAnswers.add(scanner.nextLine());
 			}
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		return questions;
+		return correctAnswers;
 	}
 
 	public List<String> exam() {
@@ -63,14 +63,22 @@ public class Exam {
 
 		for (String q : questions) {
 			System.out.println(q);
-			System.out.println(possibleAnswers.get(q.indexOf(q)));
+			System.out.println(possibleAnswers.get(questions.indexOf(q)));
 			System.out.println();
 			System.out.print("Answer: ");
-			String ans = console.next().toUpperCase();
-			userAnswers.add(ans);
+			String userAnswer = console.next().toUpperCase();
+			userAnswers.add(userAnswer);
 		}
-		System.out.println(userAnswers);
 		return userAnswers;
+	}
+
+	public void grade() {
+		int correct = 0;
+		int total = 10;
+		double grade = 0;
+		userAnswers.retainAll(correctAnswers);
+		grade = (correct / total) * 100;
+		System.out.println(userAnswers);
 	}
 
 	public static void main(String[] args) {
@@ -79,6 +87,7 @@ public class Exam {
 		ex1.loadAnswers();
 		ex1.loadCorrectAnswers();
 		ex1.exam();
+		ex1.grade();
 
 	}
 
