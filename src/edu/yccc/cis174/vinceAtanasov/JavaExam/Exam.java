@@ -76,6 +76,7 @@ public class Exam {
 		int correct = 0;
 		int total = 10;
 		double grade = 0;
+		
 		userAnswers.retainAll(correctAnswers);
 		grade = (correct / total) * 100;
 		System.out.println(userAnswers);
