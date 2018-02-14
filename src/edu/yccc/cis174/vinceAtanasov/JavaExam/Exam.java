@@ -23,10 +23,11 @@ public class Exam {
 
 	// Method that reads the file with the questions and returns list with them.
 	public List<String> loadQuestions() {
+		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the questions.txt file.
-			Scanner scanner = new Scanner(new File(
-					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\questions.txt"));
+			scanner = new Scanner(new File(
+					"J:\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\questions.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the questions.
 			while (scanner.hasNextLine()) {
@@ -35,6 +36,8 @@ public class Exam {
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		} finally {
+			scanner.close();
 		}
 		return questions;
 	}
@@ -42,10 +45,11 @@ public class Exam {
 	// Method that reads the file with the possible answers and returns list with
 	// them.
 	public List<String> loadAnswers() {
+		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the answers.txt file.
-			Scanner scanner = new Scanner(new File(
-					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\answers.txt"));
+			scanner = new Scanner(new File(
+					"J:\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\answers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the possible answers.
 			while (scanner.hasNextLine()) {
@@ -54,6 +58,8 @@ public class Exam {
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		} finally {
+			scanner.close();
 		}
 		return possibleAnswers;
 	}
@@ -61,10 +67,11 @@ public class Exam {
 	// Method that reads the file with the correct answers and returns list with
 	// them.
 	public List<String> loadCorrectAnswers() {
+		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the correctAnswers.txt file.
-			Scanner scanner = new Scanner(new File(
-					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\correctAnswers.txt"));
+			scanner = new Scanner(new File(
+					"J:\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\correctAnswers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the correct answers.
 			while (scanner.hasNextLine()) {
@@ -73,6 +80,8 @@ public class Exam {
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		} finally {
+			scanner.close();
 		}
 		return correctAnswers;
 	}
@@ -81,8 +90,9 @@ public class Exam {
 	// with its possible answers and collect an input from the student. The method
 	// returns a list with the student's answers.
 	public List<String> exam() {
+		Scanner console = null;
 		// Creating a scanner that takes the user input from the console.
-		Scanner console = new Scanner(System.in);
+		console = new Scanner(System.in);
 		// Loop that goes through the list with the questions.
 		for (String q : questions) {
 			// Printing the questions one after another.
@@ -97,6 +107,7 @@ public class Exam {
 			// Adding the user's answer to the list the user's answers.F
 			userAnswers.add(userAnswer);
 		}
+		console.close();
 		return userAnswers;
 	}
 
