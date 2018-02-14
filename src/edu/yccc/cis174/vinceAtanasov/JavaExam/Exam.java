@@ -36,7 +36,9 @@ public class Exam {
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} finally {
+		}
+		// Closing the scanner.
+		finally {
 			scanner.close();
 		}
 		return questions;
@@ -58,7 +60,9 @@ public class Exam {
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} finally {
+		}
+		// Closing the scanner.
+		finally {
 			scanner.close();
 		}
 		return possibleAnswers;
@@ -80,7 +84,9 @@ public class Exam {
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} finally {
+		}
+		// Closing the scanner.
+		finally {
 			scanner.close();
 		}
 		return correctAnswers;
@@ -90,8 +96,8 @@ public class Exam {
 	// with its possible answers and collect an input from the student. The method
 	// returns a list with the student's answers.
 	public List<String> exam() {
-		Scanner console = null;
 		// Creating a scanner that takes the user input from the console.
+		Scanner console = null;
 		console = new Scanner(System.in);
 		// Loop that goes through the list with the questions.
 		for (String q : questions) {
