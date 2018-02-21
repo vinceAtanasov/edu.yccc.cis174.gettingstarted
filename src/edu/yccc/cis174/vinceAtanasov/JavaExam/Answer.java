@@ -5,7 +5,7 @@ package edu.yccc.cis174.vinceAtanasov.JavaExam;
  * @author Vince
  *
  */
-public class Answers {
+public class Answer {
 	// Creating variable for possibleAnswers.
 	private String possibleAnswers;
 
@@ -19,12 +19,12 @@ public class Answers {
 	}
 
 	// An empty constructor for answers.
-	public Answers() {
+	public Answer() {
 
 	}
 
 	// Constructor for Answers.
-	public Answers(String possibleAnswers) {
+	public Answer(String possibleAnswers) {
 		this.possibleAnswers = possibleAnswers;
 	}
 

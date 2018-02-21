@@ -1,2 +1,4 @@
  Vince 100;
  Al 100;
+ John 90;
+ Vince 100;

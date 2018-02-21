@@ -5,7 +5,7 @@ package edu.yccc.cis174.vinceAtanasov.JavaExam;
  * @author Vince
  *
  */
-public class Questions {
+public class Question{
 	// Creating variable question.
 	private String qustion;
 
@@ -19,12 +19,12 @@ public class Questions {
 	}
 
 	// Constructor for questions.
-	public Questions(String qustion) {
+	public Question(String qustion) {
 		this.qustion = qustion;
 	}
 
 	// An empty constructor.
-	public Questions() {
+	public Question() {
 
 	}
 
