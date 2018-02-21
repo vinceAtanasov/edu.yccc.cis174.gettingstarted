@@ -1,2 +1,2 @@
- Vince 100; Vinny 90;
+ Vince 100;
  Al 100;

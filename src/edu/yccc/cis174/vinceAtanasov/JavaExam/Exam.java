@@ -149,12 +149,15 @@ public class Exam {
 	}
 	
 	
-	// Method that writes a file.
+	// Method that writes a file. We'are passing arguments for user name and grade.
 	public void writeExamResult(String userName, int grade) {
+		// Creating empty BufferedWriter out.
 		BufferedWriter out = null;
 		try {
+			// Creating FileWriter with the path for the text  file.
 			FileWriter fStream = new FileWriter("C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\results.txt", true);
 			out = new BufferedWriter(fStream);
+			// Writing out the user name and the result to a text file.
 			out.write(" ");
 			out.write(userName + " ");
 			out.write(grade + ";" + "\n");
