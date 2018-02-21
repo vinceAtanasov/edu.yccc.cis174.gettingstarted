@@ -1,5 +1,6 @@
 package edu.yccc.cis174.vinceAtanasov.JavaExam;
 
+import java.io.BufferedWriter;
 /** 
  * This is a program that evaluates the student's knowledge of Java.
  * @author Vince
@@ -7,6 +8,7 @@ package edu.yccc.cis174.vinceAtanasov.JavaExam;
  */
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -17,6 +19,7 @@ public class Exam {
 	public List<String> questions = new ArrayList<String>();
 	public List<String> possibleAnswers = new ArrayList<String>();
 	public List<String> correctAnswers = new ArrayList<String>();
+	public static String userName;
 
 	// Creating an empty list, where I will collect the student's input.
 	public List<String> userAnswers = new ArrayList<String>();
@@ -27,7 +30,7 @@ public class Exam {
 		try {
 			// Creating scanner that reads the questions.txt file.
 			scanner = new Scanner(new File(
-					"J:\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\questions.txt"));
+					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\questions.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the questions.
 			while (scanner.hasNextLine()) {
@@ -51,7 +54,7 @@ public class Exam {
 		try {
 			// Creating scanner that reads the answers.txt file.
 			scanner = new Scanner(new File(
-					"J:\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\answers.txt"));
+					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\answers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the possible answers.
 			while (scanner.hasNextLine()) {
@@ -75,7 +78,7 @@ public class Exam {
 		try {
 			// Creating scanner that reads the correctAnswers.txt file.
 			scanner = new Scanner(new File(
-					"J:\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\correctAnswers.txt"));
+					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\correctAnswers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the correct answers.
 			while (scanner.hasNextLine()) {
@@ -99,6 +102,8 @@ public class Exam {
 		// Creating a scanner that takes the user input from the console.
 		Scanner console = null;
 		console = new Scanner(System.in);
+		System.out.println("What is your name?");
+		userName = console.next();
 		// Loop that goes through the list with the questions.
 		for (String q : questions) {
 			// Printing the questions one after another.
@@ -119,7 +124,7 @@ public class Exam {
 
 	// Method that calculates and prints the student's grade after performing the
 	// exam.
-	public void grade() {
+	public int grade() {
 		// Creating variables for correct answers, total questions and the grade itself.
 		int correct = 0;
 		int total = 10;
@@ -137,8 +142,26 @@ public class Exam {
 		}
 		// Calculating the grade of the student.
 		grade = (int) ((double) correct / total * 100);
-		System.out.println();
-		System.out.println("Your grade is: " + grade);
+		//System.out.println();
+		//System.out.println(userName + " " + "Your grade is: " + grade);
+		return grade;
+		
+	}
+	
+	
+	// Method that writes a file.
+	public void writeExamResult(String userName, int grade) {
+		BufferedWriter out = null;
+		try {
+			FileWriter fStream = new FileWriter("C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\results.txt", true);
+			out = new BufferedWriter(fStream);
+			out.write(" ");
+			out.write(userName + " ");
+			out.write(grade + ";" + "\n");
+			out.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	// The main method.
@@ -151,5 +174,7 @@ public class Exam {
 		ex1.loadCorrectAnswers();
 		ex1.exam();
 		ex1.grade();
+		ex1.writeExamResult(userName, ex1.grade());
+		
 	}
 }
