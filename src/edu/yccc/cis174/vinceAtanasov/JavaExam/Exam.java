@@ -142,20 +142,21 @@ public class Exam {
 		}
 		// Calculating the grade of the student.
 		grade = (int) ((double) correct / total * 100);
-		//System.out.println();
-		//System.out.println(userName + " " + "Your grade is: " + grade);
+		// System.out.println();
+		// System.out.println(userName + " " + "Your grade is: " + grade);
 		return grade;
-		
+
 	}
-	
-	
+
 	// Method that writes a file. We'are passing arguments for user name and grade.
 	public void writeExamResult(String userName, int grade) {
 		// Creating empty BufferedWriter out.
 		BufferedWriter out = null;
 		try {
-			// Creating FileWriter with the path for the text  file.
-			FileWriter fStream = new FileWriter("C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\results.txt", true);
+			// Creating FileWriter with the path for the text file.
+			FileWriter fStream = new FileWriter(
+					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\results.txt",
+					true);
 			out = new BufferedWriter(fStream);
 			// Writing out the user name and the result to a text file.
 			out.write(" ");
@@ -178,6 +179,6 @@ public class Exam {
 		ex1.exam();
 		ex1.grade();
 		ex1.writeExamResult(userName, ex1.grade());
-		
+
 	}
 }
