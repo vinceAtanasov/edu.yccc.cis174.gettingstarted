@@ -115,7 +115,7 @@ public class Exam {
 			// Collecting the user's input from the console and converting the letter to
 			// upper case.
 			String userAnswer = console.next().toUpperCase();
-			// Adding the user's answer to the list the user's answers.F
+			// Adding the user's answer to the list the user's answers.
 			userAnswers.add(userAnswer);
 		}
 		console.close();
