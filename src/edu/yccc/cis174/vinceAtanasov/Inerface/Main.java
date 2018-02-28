@@ -1,4 +1,4 @@
-package edu.yccc.org.cis174.vinceAtanasov.Interface;
+package edu.yccc.cis174.vinceAtanasov.Inerface;
 
 public class Main {
 
