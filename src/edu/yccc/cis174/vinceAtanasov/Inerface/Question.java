@@ -27,4 +27,9 @@ public class Question {
 	public void setQuestions(List<Question> questions) {
 		this.questions = questions;
 	}
+	
+	public String toString() {
+		return this.question;
+	}
+
 }
