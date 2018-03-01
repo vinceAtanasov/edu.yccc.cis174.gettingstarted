@@ -104,8 +104,8 @@ public class JavaExam implements Exam {
 		}
 		// Calculating the grade of the student.
 		grade = (int) ((double) correct / total * 100);
-		 System.out.println();
-		System.out.println(userName + " " + "Your grade is: " + grade);
+		System.out.println();
+		System.out.println(userName + " " + "your grade is: " + grade);
 		return grade;
 
 	}
@@ -131,7 +131,6 @@ public class JavaExam implements Exam {
 			userAnswers.add(userAnswer);
 		}
 		console.close();
-		System.out.println(userAnswers);
 		return userAnswers;
 	}
 
