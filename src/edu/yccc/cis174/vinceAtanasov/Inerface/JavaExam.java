@@ -19,7 +19,7 @@ public class JavaExam implements Exam {
 		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the questions.txt file.
-			scanner = new Scanner(new File("src\\javaQuestions.txt"));
+			scanner = new Scanner(new File("javaQuestions.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the questions.
 			while (scanner.hasNextLine()) {
@@ -43,7 +43,7 @@ public class JavaExam implements Exam {
 		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the questions.txt file.
-			scanner = new Scanner(new File("src\\javaAnswers.txt"));
+			scanner = new Scanner(new File("javaAnswers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the questions.
 			while (scanner.hasNextLine()) {
@@ -67,7 +67,7 @@ public class JavaExam implements Exam {
 		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the questions.txt file.
-			scanner = new Scanner(new File("src\\javaCorrectAnswers.txt"));
+			scanner = new Scanner(new File("javaCorrectAnswers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the questions.
 			while (scanner.hasNextLine()) {
