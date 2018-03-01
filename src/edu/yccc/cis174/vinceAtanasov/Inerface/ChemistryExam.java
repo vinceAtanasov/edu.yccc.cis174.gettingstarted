@@ -17,7 +17,7 @@ public class ChemistryExam implements Exam {
 	}
 
 	@Override
-	public List<Answer> loadCorrectAnswers() {
+	public List<String> loadCorrectAnswers() {
 		// TODO Auto-generated method stub
 		return null;
 	}

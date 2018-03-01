@@ -29,8 +29,7 @@ public class Exam {
 		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the questions.txt file.
-			scanner = new Scanner(new File(
-					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\questions.txt"));
+			scanner = new Scanner(new File("questions.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the questions.
 			while (scanner.hasNextLine()) {
@@ -53,8 +52,7 @@ public class Exam {
 		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the answers.txt file.
-			scanner = new Scanner(new File(
-					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\answers.txt"));
+			scanner = new Scanner(new File("answers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the possible answers.
 			while (scanner.hasNextLine()) {
@@ -77,8 +75,7 @@ public class Exam {
 		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the correctAnswers.txt file.
-			scanner = new Scanner(new File(
-					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\correctAnswers.txt"));
+			scanner = new Scanner(new File("correctAnswers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the correct answers.
 			while (scanner.hasNextLine()) {
@@ -154,9 +151,7 @@ public class Exam {
 		BufferedWriter out = null;
 		try {
 			// Creating FileWriter with the path for the text file.
-			FileWriter fStream = new FileWriter(
-					"C:\\Users\\velik\\git\\edu.yccc.cis174.vinceAtanasov\\src\\edu\\yccc\\cis174\\vinceAtanasov\\JavaExam\\results.txt",
-					true);
+			FileWriter fStream = new FileWriter("results.txt", true);
 			out = new BufferedWriter(fStream);
 			// Writing out the user name and the result to a text file.
 			out.write(" ");
