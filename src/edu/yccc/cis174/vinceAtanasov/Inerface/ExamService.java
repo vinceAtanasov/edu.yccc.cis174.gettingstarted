@@ -3,7 +3,7 @@ package edu.yccc.cis174.vinceAtanasov.Inerface;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class ExamService {
 
 	List<Exam> exams = new ArrayList<Exam>();
 
@@ -13,7 +13,7 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		Main ex = new Main();
+		ExamService ex = new ExamService();
 		ChemistryExam ex2 = new ChemistryExam();
 
 		// 1. Load exams;
