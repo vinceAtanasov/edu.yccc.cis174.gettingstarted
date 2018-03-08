@@ -109,6 +109,7 @@ public class ChemistryExam implements Exam {
 		return grade;
 
 	}
+
 	@Override
 	public List<String> exam() {
 		// Creating a scanner that takes the user input from the console.
@@ -137,6 +138,6 @@ public class ChemistryExam implements Exam {
 	@Override
 	public void describe() {
 		System.out.println("Basic chemistry exam");
-		
+
 	}
 }
