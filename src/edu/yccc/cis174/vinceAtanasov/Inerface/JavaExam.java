@@ -110,6 +110,7 @@ public class JavaExam implements Exam {
 
 	}
 
+	@Override
 	public List<String> exam() {
 		// Creating a scanner that takes the user input from the console.
 		Scanner console = null;
@@ -137,7 +138,7 @@ public class JavaExam implements Exam {
 	@Override
 	public void describe() {
 		System.out.println("Java exam");
-		
+
 	}
 
 }
