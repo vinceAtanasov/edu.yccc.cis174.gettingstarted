@@ -134,4 +134,10 @@ public class JavaExam implements Exam {
 		return userAnswers;
 	}
 
+	@Override
+	public void describe() {
+		System.out.println("Java exam");
+		
+	}
+
 }

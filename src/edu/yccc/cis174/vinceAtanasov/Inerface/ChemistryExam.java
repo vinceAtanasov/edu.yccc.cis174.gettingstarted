@@ -133,4 +133,10 @@ public class ChemistryExam implements Exam {
 		console.close();
 		return userAnswers;
 	}
+
+	@Override
+	public void describe() {
+		System.out.println("Basic chemistry exam");
+		
+	}
 }

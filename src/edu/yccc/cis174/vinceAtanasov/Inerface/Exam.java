@@ -9,6 +9,8 @@ public interface Exam {
 	public List<Answer> loadAnswers();
 
 	public List<String> loadCorrectAnswers();
+	
+	public void describe();
 
 	public float calculateGrade();
 }
