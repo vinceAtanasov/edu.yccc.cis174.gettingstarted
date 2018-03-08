@@ -5,8 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ExamService {
-	JavaExam ex1 = new JavaExam();
-	ChemistryExam ex2 = new ChemistryExam();
+
 	List<Exam> exams = new ArrayList<Exam>();
 	public String userChoise;
 
@@ -18,7 +17,7 @@ public class ExamService {
 	public String selectExam() {
 		Scanner console = null;
 		console = new Scanner(System.in);
-		int count = 1;
+		int count = 0;
 		System.out.println("Welcome!\n");
 		System.out.println("Please, select an exam!");
 		for (Exam ex : exams) {
@@ -31,20 +30,12 @@ public class ExamService {
 	}
 
 	public void runExam() {
-		if (userChoise == "1") {
-			ex1.loadQuestions();
-			ex1.loadAnswers();
-			ex1.loadCorrectAnswers();
-			ex1.exam();
-			ex1.calculateGrade();
-		}
-		if (userChoise == "2") {
-			ex2.loadQuestions();
-			ex2.loadAnswers();
-			ex2.loadCorrectAnswers();
-			ex2.exam();
-			ex2.calculateGrade();
-		}
+		Exam e = exams.get(Integer.valueOf(userChoise).intValue());
+		e.loadQuestions();
+		e.loadAnswers();
+		e.loadCorrectAnswers();
+		e.exam();
+		e.calculateGrade();
 	}
 
 	public static void main(String[] args) {

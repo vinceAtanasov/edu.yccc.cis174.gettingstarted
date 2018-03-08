@@ -11,7 +11,7 @@ public class JavaExam implements Exam {
 	public List<Answer> possibleAnswers = new ArrayList<Answer>();
 	public List<String> correctAnswers = new ArrayList<String>();
 	public List<String> userAnswers = new ArrayList<String>();
-	public static String userName;
+	public String userName;
 
 	@Override
 	// Method that reads the file with the questions and returns list with them.

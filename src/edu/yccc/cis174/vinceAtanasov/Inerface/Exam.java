@@ -13,4 +13,6 @@ public interface Exam {
 	public void describe();
 
 	public float calculateGrade();
+
+	public List<String> exam();
 }
