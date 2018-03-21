@@ -28,4 +28,9 @@ public class Answer {
 	public Answer(String possibleAnswer) {
 		this.possibleAnswer = possibleAnswer;
 	}
+
+	// Overriding the toString method.
+	public String toString() {
+		return this.possibleAnswer;
+	}
 }

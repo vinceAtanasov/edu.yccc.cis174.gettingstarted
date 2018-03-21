@@ -119,8 +119,6 @@ public class ChemistryExam implements Exam {
 		}
 		// Calculating the grade of the student.
 		grade = (float) ((double) correct / total * 100);
-		System.out.println();
-		System.out.println(userName + " " + "your grade is: " + grade);
 		return grade;
 	}
 

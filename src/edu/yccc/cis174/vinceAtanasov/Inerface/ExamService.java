@@ -60,5 +60,4 @@ public class ExamService {
 		// result to a file.
 		exS.runExam();
 	}
-
 }
