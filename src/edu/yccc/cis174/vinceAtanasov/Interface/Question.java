@@ -1,4 +1,4 @@
-package edu.yccc.cis174.vinceAtanasov.Inerface;
+package edu.yccc.cis174.vinceAtanasov.Interface;
 
 /**
  * 

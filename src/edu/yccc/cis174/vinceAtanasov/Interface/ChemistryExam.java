@@ -1,4 +1,4 @@
-package edu.yccc.cis174.vinceAtanasov.Inerface;
+package edu.yccc.cis174.vinceAtanasov.Interface;
 /**
  * Vince
  */
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class JavaExam implements Exam {
+public class ChemistryExam implements Exam {
 	// Creating empty lists for the questions, possible answers and the answer key,
 	// which will host the data from the text files.
 	public List<Question> questions = new ArrayList<Question>();
@@ -28,7 +28,7 @@ public class JavaExam implements Exam {
 		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the questions.txt file.
-			scanner = new Scanner(new File("javaQuestions.txt"));
+			scanner = new Scanner(new File("chemistryQuestions.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the questions.
 			while (scanner.hasNextLine()) {
@@ -54,7 +54,7 @@ public class JavaExam implements Exam {
 		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the questions.txt file.
-			scanner = new Scanner(new File("javaAnswers.txt"));
+			scanner = new Scanner(new File("chemistryAnswers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the questions.
 			while (scanner.hasNextLine()) {
@@ -80,7 +80,7 @@ public class JavaExam implements Exam {
 		Scanner scanner = null;
 		try {
 			// Creating scanner that reads the questions.txt file.
-			scanner = new Scanner(new File("javaCorrectAnswers.txt"));
+			scanner = new Scanner(new File("chemistryCorrectAnswers.txt"));
 			// Loop that goes over the file and adding each line as a string element to the
 			// list. The result is full list with the questions.
 			while (scanner.hasNextLine()) {
@@ -153,7 +153,7 @@ public class JavaExam implements Exam {
 	@Override
 	// Method that describes the subject of the exam.
 	public void describe() {
-		System.out.println("Java exam");
+		System.out.println("Basic chemistry exam");
 	}
 
 	@Override
@@ -180,4 +180,5 @@ public class JavaExam implements Exam {
 	public String getUserName() {
 		return userName;
 	}
+
 }

@@ -1,4 +1,4 @@
-package edu.yccc.cis174.vinceAtanasov.Inerface;
+package edu.yccc.cis174.vinceAtanasov.Interface;
 /**
  * Vince
  * This project is to create a program that gives exams to the user by using interface.
