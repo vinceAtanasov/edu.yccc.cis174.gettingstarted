@@ -13,7 +13,7 @@ public class ChemistryExam implements Exam {
 	public List<Answer> possibleAnswers = new ArrayList<Answer>();
 	public List<String> correctAnswers = new ArrayList<String>();
 	public List<String> userAnswers = new ArrayList<String>();
-	static String userName;
+	public String userName;
 
 	@Override
 	// Method that reads the file with the questions and returns list with them.
@@ -109,7 +109,6 @@ public class ChemistryExam implements Exam {
 		System.out.println();
 		System.out.println(userName + " " + "your grade is: " + grade);
 		return grade;
-
 	}
 
 	@Override
@@ -117,8 +116,6 @@ public class ChemistryExam implements Exam {
 		// Creating a scanner that takes the user input from the console.
 		Scanner console = null;
 		console = new Scanner(System.in);
-		System.out.println("What is your name?");
-		userName = console.next();
 		// Loop that goes through the list with the questions.
 		for (Question q : questions) {
 			// Printing the questions one after another.
@@ -159,6 +156,16 @@ public class ChemistryExam implements Exam {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public String getUserName() {
+		// Creating a scanner that takes the user input from the console.
+		Scanner console = null;
+		console = new Scanner(System.in);
+		System.out.println("What is your name?");
+		userName = console.next();
+		return userName;
 	}
 
 }

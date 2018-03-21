@@ -13,7 +13,7 @@ public class JavaExam implements Exam {
 	public List<Answer> possibleAnswers = new ArrayList<Answer>();
 	public List<String> correctAnswers = new ArrayList<String>();
 	public List<String> userAnswers = new ArrayList<String>();
-	static String userName;
+	public String userName;
 
 	@Override
 	// Method that reads the file with the questions and returns list with them.
@@ -109,15 +109,13 @@ public class JavaExam implements Exam {
 		System.out.println();
 		System.out.println(userName + " " + "your grade is: " + grade);
 		return grade;
-
 	}
 
 	@Override
 	public List<String> exam() {
 		// Creating a scanner that takes the user input from the console.
-		Scanner con = new Scanner(System.in);
-		System.out.println("What is your name?");
-		userName = con.next();
+		Scanner console = null;
+		console = new Scanner(System.in);
 		// Loop that goes through the list with the questions.
 		for (Question q : questions) {
 			// Printing the questions one after another.
@@ -128,18 +126,17 @@ public class JavaExam implements Exam {
 			System.out.print("Answer: ");
 			// Collecting the user's input from the console and converting the letter to
 			// upper case.
-			String userAnswer = con.next().toUpperCase();
+			String userAnswer = console.next().toUpperCase();
 			// Adding the user's answer to the list the user's answers.
 			userAnswers.add(userAnswer);
 		}
-		con.close();
+		console.close();
 		return userAnswers;
 	}
 
 	@Override
 	public void describe() {
 		System.out.println("Java exam");
-
 	}
 
 	@Override
@@ -161,4 +158,13 @@ public class JavaExam implements Exam {
 		}
 	}
 
+	@Override
+	public String getUserName() {
+		// Creating a scanner that takes the user input from the console.
+		Scanner console = null;
+		console = new Scanner(System.in);
+		System.out.println("What is your name?");
+		userName = console.next();
+		return userName;
+	}
 }

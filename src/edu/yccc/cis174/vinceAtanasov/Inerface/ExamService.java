@@ -9,7 +9,6 @@ public class ExamService {
 	List<Exam> exams = new ArrayList<Exam>();
 	public String userChoise;
 	public Scanner console = new Scanner(System.in);
-	
 
 	public void loadExams() {
 		exams.add(new JavaExam());
@@ -33,9 +32,10 @@ public class ExamService {
 		exam.loadQuestions();
 		exam.loadAnswers();
 		exam.loadCorrectAnswers();
+		exam.getUserName();
 		exam.exam();
 		exam.calculateGrade();
-		//exam.writeExamResult(userName, exam.calculateGrade());
+		exam.writeExamResult(exam.getUserName(), exam.calculateGrade());
 	}
 	
 	
