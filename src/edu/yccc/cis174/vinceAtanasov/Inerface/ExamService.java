@@ -32,7 +32,6 @@ public class ExamService {
 		exam.loadQuestions();
 		exam.loadAnswers();
 		exam.loadCorrectAnswers();
-		exam.getUserName();
 		exam.exam();
 		exam.calculateGrade();
 		exam.writeExamResult(exam.getUserName(), exam.calculateGrade());
