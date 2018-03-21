@@ -15,4 +15,6 @@ public interface Exam {
 	public float calculateGrade();
 
 	public List<String> exam();
+	
+	public void writeExamResult(String userName, float grade);
 }

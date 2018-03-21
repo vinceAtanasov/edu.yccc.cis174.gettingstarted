@@ -8,6 +8,8 @@ public class ExamService {
 
 	List<Exam> exams = new ArrayList<Exam>();
 	public String userChoise;
+	public Scanner console = new Scanner(System.in);
+	
 
 	public void loadExams() {
 		exams.add(new JavaExam());
@@ -15,8 +17,6 @@ public class ExamService {
 	}
 
 	public String selectExam() {
-		Scanner console = null;
-		console = new Scanner(System.in);
 		int count = 0;
 		System.out.println("Welcome!\n");
 		System.out.println("Please, select an exam!");
@@ -25,28 +25,29 @@ public class ExamService {
 			ex.describe();
 		}
 		userChoise = console.next();
-		console.close();
 		return userChoise;
 	}
 
 	public void runExam() {
-		Exam e = exams.get(Integer.valueOf(userChoise).intValue());
-		e.loadQuestions();
-		e.loadAnswers();
-		e.loadCorrectAnswers();
-		e.exam();
-		e.calculateGrade();
+		Exam exam = exams.get(Integer.valueOf(userChoise).intValue());
+		exam.loadQuestions();
+		exam.loadAnswers();
+		exam.loadCorrectAnswers();
+		exam.exam();
+		exam.calculateGrade();
+		//exam.writeExamResult(userName, exam.calculateGrade());
 	}
-
+	
+	
 	public static void main(String[] args) {
-		ExamService exs = new ExamService();
-
+		ExamService exS = new ExamService();
+		
 		// 1. Load exams;
-		exs.loadExams();
+		exS.loadExams();
 		// 2. Offer to the user all of the available exams.
-		exs.selectExam();
+		exS.selectExam();
 		// 3. Give exam, Ask questions, collect responses, calculate grade.
-		exs.runExam();
+		exS.runExam();
 	}
 
 }

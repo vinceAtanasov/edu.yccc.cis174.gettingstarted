@@ -1,7 +1,9 @@
 package edu.yccc.cis174.vinceAtanasov.Inerface;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +13,7 @@ public class ChemistryExam implements Exam {
 	public List<Answer> possibleAnswers = new ArrayList<Answer>();
 	public List<String> correctAnswers = new ArrayList<String>();
 	public List<String> userAnswers = new ArrayList<String>();
-	public String userName;
+	static String userName;
 
 	@Override
 	// Method that reads the file with the questions and returns list with them.
@@ -103,7 +105,7 @@ public class ChemistryExam implements Exam {
 			}
 		}
 		// Calculating the grade of the student.
-		grade = (int) ((double) correct / total * 100);
+		grade = (float) ((double) correct / total * 100);
 		System.out.println();
 		System.out.println(userName + " " + "your grade is: " + grade);
 		return grade;
@@ -138,6 +140,25 @@ public class ChemistryExam implements Exam {
 	@Override
 	public void describe() {
 		System.out.println("Basic chemistry exam");
-
 	}
+
+	@Override
+	// Method that writes a file. We'are passing arguments for user name and grade.
+	public void writeExamResult(String userName, float grade) {
+		// Creating empty BufferedWriter out.
+		BufferedWriter out = null;
+		try {
+			// Creating FileWriter with the path for the text file.
+			FileWriter fStream = new FileWriter("Examresults.txt", true);
+			out = new BufferedWriter(fStream);
+			// Writing out the user name and the result to a text file.
+			out.write(" ");
+			out.write(userName + " ");
+			out.write(grade + ";" + "\n");
+			out.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 }
