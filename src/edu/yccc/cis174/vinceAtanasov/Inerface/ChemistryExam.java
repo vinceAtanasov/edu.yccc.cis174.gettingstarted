@@ -1,4 +1,7 @@
 package edu.yccc.cis174.vinceAtanasov.Inerface;
+/**
+ * Vince
+ */
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -9,10 +12,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ChemistryExam implements Exam {
+	// Creating empty lists for the questions, possible answers and the answer key,
+	// which will host the data from the text files.
 	public List<Question> questions = new ArrayList<Question>();
 	public List<Answer> possibleAnswers = new ArrayList<Answer>();
 	public List<String> correctAnswers = new ArrayList<String>();
+	// Creating an empty list, where I will collect the student's input.
 	public List<String> userAnswers = new ArrayList<String>();
+	// Variable for user's name.
 	public String userName;
 
 	@Override
@@ -41,6 +48,8 @@ public class ChemistryExam implements Exam {
 	}
 
 	@Override
+	// Method that reads the file with the possible answers and returns list with
+	// them.
 	public List<Answer> loadAnswers() {
 		Scanner scanner = null;
 		try {
@@ -65,6 +74,8 @@ public class ChemistryExam implements Exam {
 	}
 
 	@Override
+	// Method that reads the file with the correct answers and returns list with
+	// them.
 	public List<String> loadCorrectAnswers() {
 		Scanner scanner = null;
 		try {
@@ -88,6 +99,8 @@ public class ChemistryExam implements Exam {
 	}
 
 	@Override
+	// Method that calculates and prints the student's grade after performing the
+	// exam.
 	public float calculateGrade() {
 		// Creating variables for correct answers, total questions and the grade itself.
 		int correct = 0;
@@ -112,6 +125,9 @@ public class ChemistryExam implements Exam {
 	}
 
 	@Override
+	// Method that does the examination of the student. Prints out each question
+	// with its possible answers and collect an input from the student. The method
+	// returns a list with the student's answers.
 	public List<String> exam() {
 		// Creating a scanner that takes the user input from the console.
 		Scanner console = null;
@@ -137,6 +153,7 @@ public class ChemistryExam implements Exam {
 	}
 
 	@Override
+	// Method that describes the subject of the exam.
 	public void describe() {
 		System.out.println("Basic chemistry exam");
 	}
@@ -161,6 +178,7 @@ public class ChemistryExam implements Exam {
 	}
 
 	@Override
+	// Method that returns the user's name.
 	public String getUserName() {
 		return userName;
 	}

@@ -1,17 +1,16 @@
 package edu.yccc.cis174.vinceAtanasov.Inerface;
 
+/**
+ * 
+ * @author Vince
+ *
+ */
+
 public class Answer {
+	// Creating variable for possibleAnswer.
 	private String possibleAnswer;
 
-	public Answer() {
-
-	}
-
-	public Answer(String possibleAnswer) {
-		this.possibleAnswer = possibleAnswer;
-
-	}
-
+	// Getter and setter for the variable possibleAnswer.
 	public String getPossibleAnswer() {
 		return possibleAnswer;
 	}
@@ -20,8 +19,13 @@ public class Answer {
 		this.possibleAnswer = possibleAnswer;
 	}
 
-	public String toString() {
-		return this.possibleAnswer;
+	// An empty constructor for answer.
+	public Answer() {
+
 	}
 
+	// Constructor for Answer.
+	public Answer(String possibleAnswer) {
+		this.possibleAnswer = possibleAnswer;
+	}
 }

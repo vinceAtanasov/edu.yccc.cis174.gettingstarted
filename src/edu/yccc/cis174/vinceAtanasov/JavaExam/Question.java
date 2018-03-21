@@ -18,7 +18,7 @@ public class Question{
 		this.qustion = qustion;
 	}
 
-	// Constructor for questions.
+	// Constructor for question.
 	public Question(String qustion) {
 		this.qustion = qustion;
 	}

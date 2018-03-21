@@ -1,16 +1,16 @@
 package edu.yccc.cis174.vinceAtanasov.Inerface;
 
+/**
+ * 
+ * @author Vince
+ *
+ */
+
 public class Question {
+	// Creating variable question.
 	private String question;
 
-	public Question() {
-
-	}
-
-	public Question(String question) {
-		this.question = question;
-	}
-
+	// Getter and setter for the variable question.
 	public String getQuestion() {
 		return question;
 	}
@@ -19,8 +19,18 @@ public class Question {
 		this.question = question;
 	}
 
+	// Constructor for question.
+	public Question(String question) {
+		this.question = question;
+	}
+
+	// An empty constructor.
+	public Question() {
+
+	}
+
+	// Overriding the toString method.
 	public String toString() {
 		return this.question;
 	}
-
 }
