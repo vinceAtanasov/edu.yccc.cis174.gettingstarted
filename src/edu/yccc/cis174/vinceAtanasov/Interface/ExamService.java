@@ -25,7 +25,7 @@ public class ExamService {
 	// Method that gives the user to choose the exam and returning the value of the
 	// choice.
 	public String selectExam() {
-		int count = 0;
+		int count = 1;
 		System.out.println("Welcome!\n");
 		System.out.println("Please, select an exam!");
 		for (Exam ex : exams) {
@@ -39,7 +39,7 @@ public class ExamService {
 	// Method that calls all the methods from the interface. This is where we are
 	// performing the selected exam from the user.
 	public void runExam() {
-		Exam exam = exams.get(Integer.valueOf(userChoice).intValue());
+		Exam exam = exams.get(Integer.valueOf(userChoice).intValue() - 1);
 		exam.loadQuestions();
 		exam.loadAnswers();
 		exam.loadCorrectAnswers();
