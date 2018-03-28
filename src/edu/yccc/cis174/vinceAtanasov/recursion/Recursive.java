@@ -17,7 +17,6 @@ public class Recursive {
 					walkDirectories(files[n].getAbsolutePath());
 				}
 			}
-
 		}
 	}
 
