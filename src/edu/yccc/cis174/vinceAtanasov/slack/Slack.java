@@ -5,13 +5,15 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.Toolkit;
 import javax.swing.JRadioButton;
-import java.awt.BorderLayout;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Slack {
 
 	private JFrame frmSlackMessenger;
+	private SlackService slackS = new SlackService();
 
 	/**
 	 * Launch the application.
@@ -60,6 +62,12 @@ public class Slack {
 		frmSlackMessenger.getContentPane().add(textArea);
 		
 		JButton btnSend = new JButton("Send");
+		btnSend.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				slackS.submitTextToSlack(textArea.getText());
+				textArea.setText(null);
+			}
+		});
 		btnSend.setBounds(493, 180, 168, 54);
 		frmSlackMessenger.getContentPane().add(btnSend);
 	}
